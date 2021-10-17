@@ -1,7 +1,4 @@
-const kaboom = require("kaboom")
-const {
-    set
-} = require("mongoose")
+import kaboom from "../node_modules/kaboom"
 kaboom()
 
 loadSprite("player", "https://raw.githubusercontent.com/forze0912/stickFight/master/src/sprites/stick-man-2863519_1280.png")
@@ -104,9 +101,12 @@ function spawn() {
 
     var towers = 0
 
+    var card = 1
+
     keyPress("right", () => {
         tower()
         towers = towers + 1
+        card = 3
     })
 
     hologram()
@@ -117,15 +117,16 @@ function spawn() {
 
     keyPress("up", () => {
         players = players + 1
+        card = 1
         hologram()
     })
 
     keyPress("down", () => {
         players2 = players2 + 1
+        card = 2
         troop2()
     })
 
-    var card = 1
 
     keyDown("1", () => {
         card = 1
