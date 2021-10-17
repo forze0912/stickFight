@@ -1,4 +1,4 @@
-import kaboom from "../node_modules/kaboom"
+import kaboom from "kaboom"
 kaboom()
 
 loadSprite("player", "https://raw.githubusercontent.com/forze0912/stickFight/master/src/sprites/stick-man-2863519_1280.png")
